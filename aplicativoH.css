@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --cor-texto: #121212;
+  --cor-texto-branco: #FEFEFE;
+  --fundo-header: #0099ff;
+  --altura-menu: 6rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p, 
+div,
+span,
+strong,
+em{
+  color: var(--cor-texto);
+  font-family:'Ubuntu', sans-serif;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+}
+
+header{
+  background: var(--fundo-header);
+  height: var(--altura-menu);
+  padding: 0 2rem;
+  position: relative;
+  transition: all ease-in-out 0.5s;
+}
+
+nav{
+  background: #333;
+  height: 100%;
+  left: 0;  
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition: all ease-in-out .3s;
+}
+
+nav ul{
+  list-style: none;
+  padding: 2rem;
+}
+
+nav li{
+  padding: 1rem 0;
+}
+
+nav a{
+  color: var(--cor-texto-branco);
+  display: block;
+  text-decoration: none;
+}
+
+nav.hidden{
+  overflow: hidden;
+  width: 0;
+}
+
+nav.active{
+  width: 20vw;
+}
+
+header h1{
+  line-height: var(--altura-menu);
+  text-align: center;
+}
+
+body h1{
+  text-align: center;
+}
+
+#btn{
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ 
+#menu-icon{
+  height: 25px;
+  line-height: 6rem;
+  width: 40px;
+}
+
+#menu-icon [id^="linha"]{
+  background: var(--cor-texto);
+  border-radius: 5px;
+  height: 5px;
+  margin-bottom: 5px;
+  width: 100%;  
+}
+
+#menu-icon [id^="linha"]:last-of-type{
+  margin-bottom: 0;
+}
+
+#close{
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+nav,
+#menu-bar,
+header{
+    transition: all ease-in-out 0.4s;
+}
